@@ -1,0 +1,243 @@
+/* html stuff start */
+@font-face {
+  font-family: 'regular';
+  src: url(assets/doctype/DiarySanta-DOq89.ttf);
+}
+@font-face {
+    font-family: 'monospace';
+    src: url(assets/doctype/Profont_TrueType.ttf);
+}
+
+:root {
+    --site-bg: black;
+    --site-fg: white;
+}
+html{ font-family:'regular'; }
+
+body {
+    line-height: 18px;
+    background-color: var(--site-bg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url("assets/images/bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-variant-east-asian: traditional
+}
+::selection{ color: var(--site-fg); background: var(--site-bg); }
+/* html stuff end */
+
+/* site stuff start */
+input{
+    margin-right: 6px;
+}
+label:has(> input:checked) { text-decoration: line-through; }
+#leftcontent{float:left}
+#leftcontent .textbox{margin-bottom: 10px;}
+#rightcontent{float:right}
+#daddydiv{
+    position: absolute;
+    text-align: left;
+    top: 0; left: 50%;
+    transform: translate(-50%, -30px);
+}
+#prison {
+    width: 900px;
+    border-radius: 20px;
+    margin: 60px 0px 0px 0px;
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.596);
+}
+
+.textbox {
+    padding: 10px;
+    float:left;
+    margin:10px;
+    background-color: white;
+}
+
+#notes{
+    border-radius: 10px;
+    float:left;
+    margin:10px;
+    padding: 10px;
+    background-color: white;
+}
+
+
+
+#graphContainer{
+    width:600px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#history{
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: lightgray;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-color: red;
+    border-style: solid;
+}
+
+#timerDiv p{
+    margin: 4px;
+}
+#timerDiv span{
+    min-width: 5px;
+    display:inline;
+}
+[contenteditable=true]:empty:before {
+    color: gray;
+    content: "0";
+}
+
+button, input, select, select *, #upload, input::file-selector-button{
+    font-family: 'regular';    
+}
+input::file-selector-button > *{
+    height: 20px;
+    padding: 0px;
+    margin: 0px;
+}
+#timerDiv{
+    margin: 20px 10px 10px 10px;
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+#timerDiv input, #timerDiv #timerDisplay, #timerDiv p{
+    font-size: 20px;
+    font-family: monospace;
+}
+#timerDiv #timerDisplay{
+    margin: 9px;
+}
+#timerDiv input{
+    width: 2ch;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    border: 2px solid transparent;
+}
+#monthly{
+    float:left;
+    background-color: lightblue;
+    text-align: left;
+}
+#weekly span, #monthly span{
+    display:block;
+    text-align: center;
+}
+#weekly p, #monthly p{
+    text-align: left;
+    margin:1px;
+    box-sizing: border-box; 
+    float:left;
+    display: block;
+    padding: 2px 5px 2px 5px;
+    height: 100px;
+    border-collapse: collapse;
+}
+#daily{
+    box-sizing: border-box; 
+    border-radius: 10px;
+    min-width:220px;
+    padding: 0px 5px 5px 5px;
+    margin:10px;
+    text-align: left;
+    background-color: white;
+}
+#daily h4:first-child{
+    border-top: none !important;
+}
+#daily label{
+    display: block;
+    margin: 0px 0px -18px 0px;
+}
+#daily label::selection{
+    background: unset; color:unset;
+}
+#daily label:hover{
+    background-color: #3a3a3a21;
+    border-radius: 5px;
+}
+#daily h4{
+    margin: 0px 0px -15px 0px;
+    border-top: 2px solid rgb(24, 24, 24);
+    text-align: center;
+    padding-top: 5px;
+}
+
+#edit{
+    box-sizing: border-box; 
+    min-width:220px;
+    border-radius: 10px;
+    float:right;
+    margin:10px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* site stuff end */
+
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    padding: 6px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    z-index: 1;
+    overflow-y: scroll;
+}
+.dropdown-content button{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: inherit;
+    width: 180px;
+    text-align: left;
+}
+.dropdown-content button:hover{
+    background-color: #316e33;
+}
+  
+.dropdown:hover .dropdown-content { display: block; }
+
+.dropdown:hover .dropbtn { background-color: #3e8e41; }
+
+/* add to do css */
+#add_todo input{
+    border: #4CAF50 2px solid;
+}
+#add_todo input:focus{
+    outline: none;
+    border: #3e8e41 2px solid;
+    background-color: #4CAF50;
+    color: white;
+}
